@@ -5,11 +5,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Enable CORS for all routes
-app.use(cors({
-  origin: "*",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type"]
-}));
+const cors = require('cors');
+app.use(cors());
 
 // Conditionally connect to database if MONGODB_URI is provided
 // For now, we're using in-memory storage, so we'll skip DB connection
