@@ -1,5 +1,5 @@
 // API base URL - adjust this if your backend is running on a different port
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = 'https://app-h7v3.onrender.com/api';
 
 // DOM elements
 const usersTableBody = document.getElementById('usersTableBody');
