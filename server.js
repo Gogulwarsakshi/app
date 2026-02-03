@@ -1,7 +1,13 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Enable CORS for all routes
+app.use(cors({
+  origin: '*'
+}));
 
 // Conditionally connect to database if MONGODB_URI is provided
 // For now, we're using in-memory storage, so we'll skip DB connection
