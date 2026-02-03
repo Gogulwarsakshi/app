@@ -1,0 +1,21 @@
+{
+  "name": "users-dashboard-frontend",
+  "version": "1.0.0",
+  "description": "Frontend dashboard for managing users",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ./frontend",
+    "dev": "npx serve -s ./frontend"
+  },
+  "keywords": [
+    "frontend",
+    "dashboard",
+    "users",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Users Dashboard</h1>
+            <p>Manage your users with this simple interface</p>
+        </header>
+        
+        <main>
+            <section class="controls">
+                <button id="refreshBtn">Refresh Users</button>
+                <button id="addUserBtn">Add New User</button>
+            </section>
+            
+            <section class="user-form hidden" id="userFormSection">
+                <h2>Add/Edit User</h2>
+                <form id="userForm">
+                    <input type="hidden" id="userId">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="saveUserBtn">Save User</button>
+                        <button type="button" id="cancelBtn">Cancel</button>
+                    </div>
+                </form>
+            </section>
+            
+            <section class="users-list">
+                <h2>Users List</h2>
+                <div id="loadingSpinner" class="spinner hidden">Loading...</div>
+                <table id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Created At</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody">
+                        <!-- Users will be loaded here -->
+                    </tbody>
+                </table>
+                <div id="noUsersMessage" class="hidden">No users found</div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
